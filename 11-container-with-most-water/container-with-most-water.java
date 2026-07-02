@@ -9,11 +9,13 @@ class Solution {
         while(start<end){
 
             int h = Math.min(height[start],height[end]);
+           
+
             int width = end - start;
 
             int curCap = h * width;
 
-            if (maxCap<curCap) {
+            if(maxCap<curCap){
                 maxCap = curCap;
             }
 
