@@ -1,26 +1,19 @@
 class Solution {
     public int findLucky(int[] arr) {
+        int[] freq = new int[501];
 
-        HashMap <Integer, Integer> hm = new HashMap<>();
+        // Count frequency
+        for (int i = 0; i < arr.length; i++) {
+            freq[arr[i]]++;
+        }
 
-        for(int i=0; i<arr.length; i++){
-            
-            int ele = arr[i];
-
-            if(hm.containsKey(ele)==true){
-                hm.put(ele, hm.get(ele)+1);
-            }else{
-                hm.put(ele,1);
+        // Find the largest lucky integer
+        for (int i = 500; i >= 1; i--) {
+            if (freq[i] == i) {
+                return i;
             }
         }
 
-        int ans = -1;
-
-        for(int key : hm.keySet()){
-            if (hm.get(key)==key){
-                ans = Math.max(ans, key);
-            }
-        }
-        return ans;
+        return -1;
     }
 }
