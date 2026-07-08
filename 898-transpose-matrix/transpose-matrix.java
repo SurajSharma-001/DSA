@@ -9,7 +9,6 @@ class Solution {
             for(int j=0; j<arr.length; j++){
                 arr[j][i] = matrix[i][j];
             }
-            System.out.println();
         }
         
         return arr;
