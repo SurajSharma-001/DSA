@@ -12,7 +12,10 @@ class Solution {
                 currSum = nums[i]; 
             }
             
-            maxSum = Math.max(currSum, maxSum);
+            //maxSum = Math.max(currSum, maxSum);
+            if(maxSum<currSum){
+                maxSum = currSum;
+            }
         }
         
         return maxSum;
