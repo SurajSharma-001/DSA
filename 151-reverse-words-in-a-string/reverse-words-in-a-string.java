@@ -21,3 +21,25 @@ class Solution {
         return ans;
     }
 }
+
+// -------------Another Method-----------------
+/*
+class Solution {
+    public String reverseWords(String s) {
+        // 1. Trim leading/trailing spaces and split by one or more whitespace characters
+        String[] arr = s.trim().split("\\s+"); 
+        
+        StringBuilder sb = new StringBuilder();
+        
+        // 2. Append words in reverse order
+        for (int i = arr.length - 1; i >= 0; i--) {
+            sb.append(arr[i]);
+            if (i > 0) {
+                sb.append(" "); // Add space between words (prevents extra trailing space)
+            }
+        }
+        
+        return sb.toString();
+    }
+}
+*/
