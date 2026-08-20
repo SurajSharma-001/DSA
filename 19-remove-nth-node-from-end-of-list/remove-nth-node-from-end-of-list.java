@@ -15,7 +15,7 @@ class Solution {
             return null;
         }
 
-        ListNode fast = head;
+        ListNode fast = head;         // two pointer approach
         ListNode slow = head;
 
         while (n > 0) {
